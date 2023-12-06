@@ -40,7 +40,7 @@ Public Sub GetEmails()
     For Each emailAddress In emailAddresses
         For Each objStore In objNamespace.Stores
             If objStore.DisplayName = emailAddress Then
-                ' Adjust the folder path as needed
+                ' Adjust the folder path as needed if you want just inbox stop it at inbox if you need a subfolder continue using it like this                
                 Set objFolder = objStore.GetRootFolder.Folders("Inbox").Folders("Sub_Zero_Folder")
                 Exit For
             End If
